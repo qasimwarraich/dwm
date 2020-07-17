@@ -1,6 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
+static const unsigned int baralpha        = 0xd0;    /* alpha bar patch */
+static const unsigned int borderalpha     = OPAQUE;  /* alpha bar patch */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 4;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -20,7 +22,12 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray1, col_gray4,  col_selected  },
     [SchemeTitle]  = { col_gray4, col_gray1,  col_cyan  },
 };
-
+/* Pinched from DT */
+static const unsigned int alphas[][3] = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
