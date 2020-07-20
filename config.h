@@ -3,13 +3,14 @@
 /* appearance */
 static const unsigned int baralpha        = 0xd0;    /* alpha bar patch */
 static const unsigned int borderalpha     = OPAQUE;  /* alpha bar patch */
+static const unsigned int noalpha         = 0x0;     /* no alpha for border test*/
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 4;        /* gaps between windows */
+static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 4;       /* vertical padding of bar */
-static const int sidepad            = 4;       /* horizontal padding of bar */
+static const int vertpad            = 8;       /* vertical padding of bar */
+static const int sidepad            = 8;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Liberation Mono:size=10", "JoyPixels:size=10" };
 static const char dmenufont[]       = "Liberation Mono:size=10";
 static const char col_gray1[]       = "#222222";
@@ -20,7 +21,7 @@ static const char col_cyan[]        = "#005577";
 static const char col_selected[]    = "#DAA520";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
 	[SchemeSel]  = { col_gray1, col_gray4,  col_selected  },
     [SchemeTitle]  = { col_gray4, col_gray1,  col_cyan  },
 };
