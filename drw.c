@@ -211,7 +211,7 @@ drw_clr_create(Drw *drw, Clr *dest, const char *clrname, unsigned int alpha)
     /* Fix for transparent terminal borders from: */
     /*     https://github.com/szatanjl/dwm/commit/1529909466206016f2101457bbf37c67195714c8 */
  	/* dest->pixel |= 0xff << 24; */
-	dest->pixel = (dest->pixel & 0x00ffffffU) | (alpha << 24);
+	/* dest->pixel = (dest->pixel & 0x00ffffffU) | (alpha << 24); */
 }
 
 /* Wrapper to create color schemes. The caller has to call free(3) on the
