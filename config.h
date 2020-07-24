@@ -9,8 +9,8 @@ static const unsigned int gappx     = 12;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int vertpad            = 8;       /* vertical padding of bar */
-static const int sidepad            = 8;       /* horizontal padding of bar */
+static const int vertpad            = 12;       /* vertical padding of bar */
+static const int sidepad            = 12;       /* horizontal padding of bar */
 static const char *fonts[]          = { "Hack Nerd Font :size=10:antialias=true",
                                         "JoyPixels:size=10"};
 static const char dmenufont[]       = "Hack Nerd Font:size=10:antialias=true:autohint=true";
@@ -71,7 +71,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* the last three args given to dmenu are specific to the gaps and display resolution of my current system. */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_gray4, "-sf", col_gray1, "-y", "8", "-x", "8", "-w", "1584", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_gray4, "-sf", col_gray1, "-y", "12", "-x", "12", "-w", "1576", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
