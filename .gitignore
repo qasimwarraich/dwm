@@ -1,1 +1,5 @@
 compile_flags.txt
+dwm
+dwm.o
+drw.o
+util.o
